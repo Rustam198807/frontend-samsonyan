@@ -1,0 +1,25 @@
+/* Blog Posts wrap styles */
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 3.5%;
+  width: 90%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  .blogs {
+    gap: 35px 3%;
+    padding: 1rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .blogs {
+    gap: 30px 0;
+  }
+}

@@ -1,0 +1,111 @@
+/* Main Menu Styles */
+.main_menu {
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 0 0;
+  border-style: solid;
+  border-color: #e9e9e9;
+  border-width: 1px 0;
+  background-color: #fff;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+.main_menu.hidden {
+  transform: translateY(-101%);
+}
+
+.main_menu > ul {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main Menu items arrow */
+.main_menu ul li.has_subMenu > a img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
+/* Main Menu items Text */
+.main_menu ul li a {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main_menu ul li.has_subMenu a {
+  padding-bottom: 1.25rem;
+}
+
+.main_menu ul li a:hover {
+  color: #eb0028;
+}
+
+/* Sub Menu */
+
+.main_menu ul li .sub_menu {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 11rem;
+  padding: 0.69rem 1.25rem;
+  margin: 0;
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: 0.3s;
+  list-style: none;
+}
+
+/* Open Sub Menu on Hover */
+.main_menu ul li:hover .sub_menu {
+  transform: scaleY(1);
+}
+
+/* Sub Menu items Styles */
+.main_menu ul li .sub_menu a {
+  position: relative;
+  display: block;
+  padding: 0.4rem 0;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.main_menu ul li .sub_menu a span {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.main_menu ul li .sub_menu a:hover span {
+  transform: translateX(5px);
+}
+
+.main_menu ul li .sub_menu a:hover {
+  color: #969696;
+}
+
+.main_menu ul li .sub_menu li:not(:last-child) {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* Sub Menu items arrow Styles */
+.main_menu ul li .sub_menu a img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: inline-block;
+  transform: translateY(-50%);
+}
